@@ -15,25 +15,25 @@ export default function ProductCard({ product, onCustomize }: ProductCardProps) 
   };
 
   return (
-    <Card className="group cursor-pointer hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+    <Card className="group cursor-pointer hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 overflow-hidden">
       <div 
-        className="h-64 bg-cover bg-center"
+        className="h-64 bg-cover bg-center group-hover:scale-110 transition-transform duration-300"
         style={{
           backgroundImage: `url(${product.imageUrl || 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'})`
         }}
       />
       <CardContent className="p-6">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="font-semibold text-xl text-brown-primary">{product.name}</h3>
+          <h3 className="font-semibold text-xl text-brown-primary group-hover:text-brown-secondary transition-colors duration-300">{product.name}</h3>
           {product.featured && (
-            <Badge className="bg-brown-primary">Featured</Badge>
+            <Badge className="bg-brown-primary group-hover:bg-brown-secondary transition-colors duration-300">Featured</Badge>
           )}
         </div>
         
         <p className="text-gray-600 mb-4 line-clamp-2">{product.description}</p>
         
         <div className="flex justify-between items-center mb-4">
-          <span className="text-2xl font-bold text-brown-primary">
+          <span className="text-2xl font-bold text-brown-primary group-hover:text-brown-secondary transition-colors duration-300">
             {formatPrice(product.price)}
           </span>
           {product.dimensions && (
@@ -58,7 +58,7 @@ export default function ProductCard({ product, onCustomize }: ProductCardProps) 
         
         <div className="flex gap-2 mb-4">
           <Button 
-            className="flex-1 bg-brown-primary text-white hover:bg-brown-secondary"
+            className="flex-1 bg-brown-primary text-white hover:bg-brown-secondary transition-all duration-300 hover:scale-105"
             disabled={!product.inStock}
           >
             <ShoppingCart className="h-4 w-4 mr-2" />
@@ -67,7 +67,7 @@ export default function ProductCard({ product, onCustomize }: ProductCardProps) 
           <Button 
             variant="outline" 
             size="icon"
-            className="border-gray-300 hover:bg-gray-100"
+            className="border-gray-300 hover:bg-gray-100 transition-all duration-300 hover:scale-110"
           >
             <Heart className="h-4 w-4" />
           </Button>
@@ -75,7 +75,7 @@ export default function ProductCard({ product, onCustomize }: ProductCardProps) 
         
         <Button 
           variant="outline" 
-          className="w-full text-brown-primary border-brown-primary hover:bg-brown-primary hover:text-white"
+          className="w-full text-brown-primary border-brown-primary hover:bg-brown-primary hover:text-white transition-all duration-300 hover:scale-105"
           onClick={onCustomize}
         >
           Customize This Design

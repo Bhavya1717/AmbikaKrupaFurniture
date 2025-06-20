@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -6,6 +6,7 @@ import { Menu, X, Hammer } from "lucide-react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [location] = useLocation();
   const { isAuthenticated, isLoading } = useAuth();
 
@@ -19,14 +20,26 @@ export default function Navbar() {
 
   const isActive = (href: string) => location === href;
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'py-2 shadow-xl backdrop-blur-sm bg-white/95' : 'py-4'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Hammer className="h-8 w-8 text-brown-primary mr-3" />
-            <span className="font-bold text-xl text-brown-primary">CraftWood</span>
+          <Link href="/" className="flex items-center group">
+            <Hammer className="h-8 w-8 text-brown-primary mr-3 transition-transform duration-300 group-hover:rotate-12" />
+            <span className="font-bold text-xl text-brown-primary transition-colors duration-300 group-hover:text-brown-secondary">CraftWood</span>
           </Link>
           
           {/* Desktop Navigation */}
@@ -35,10 +48,12 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`transition-colors ${
+                className={`transition-all duration-300 relative group ${
                   isActive(item.href)
                     ? "text-brown-primary font-medium"
-                    : "text-gray-700 hover:text-brown-primary"
+                    : "text-gray-700 hover:text-brown-primary hover:scale-105"
+                } after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-brown-primary after:transition-all after:duration-300 hover:after:w-full ${
+                  isActive(item.href) ? "after:w-full" : ""
                 }`}
               >
                 {item.label}
@@ -54,14 +69,14 @@ export default function Navbar() {
                   <Button 
                     asChild 
                     variant="outline"
-                    className="border-brown-primary text-brown-primary hover:bg-brown-primary hover:text-white"
+                    className="border-brown-primary text-brown-primary hover:bg-brown-primary hover:text-white transition-all duration-300 hover:scale-105"
                   >
                     <a href="/api/logout">Logout</a>
                   </Button>
                 ) : (
                   <Button 
                     asChild
-                    className="bg-brown-primary hover:bg-brown-secondary text-white"
+                    className="bg-brown-primary hover:bg-brown-secondary text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   >
                     <a href="/api/login">Login</a>
                   </Button>
