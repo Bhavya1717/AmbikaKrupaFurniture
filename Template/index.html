@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CraftWood - Premium Custom Furniture</title>
+        <meta
+            name="description"
+            content="Premium custom furniture crafted with precision. Beds, chairs, TV units and custom pieces starting from ₹8,000. Contact +91 98765 43210"
+        />
+
+        <!-- External Libraries -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="font-inter bg-white">
+        <!-- Navigation -->
+        <nav
+            id="navbar"
+            class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4"
+        >
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <i
+                            id="logo-icon"
+                            class="fas fa-hammer text-2xl text-brown-primary transition-transform duration-300"
+                        ></i>
+                        <span class="text-2xl font-bold text-brown-primary"
+                            >CraftWood</span
+                        >
+                    </div>
+
+                    <div class="hidden md:flex space-x-8">
+                        <a
+                            href="#home"
+                            class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300"
+                            >Home</a
+                        >
+                        <a
+                            href="#products"
+                            class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300"
+                            >Products</a
+                        >
+                        <a
+                            href="#gallery"
+                            class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300"
+                            >Gallery</a
+                        >
+                        <a
+                            href="#about"
+                            class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300"
+                            >About</a
+                        >
+                        <a
+                            href="#contact"
+                            class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300"
+                            >Contact</a
+                        >
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <a
+                            href="tel:+919876543210"
+                            class="btn-primary hidden sm:inline-flex"
+                        >
+                            <i class="fas fa-phone mr-2"></i>
+                            Get Quote
+                        </a>
+                        <button
+                            id="mobile-menu-btn"
+                            class="md:hidden text-gray-700"
+                        >
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div
+                id="mobile-menu"
+                class="md:hidden bg-white shadow-lg transform -translate-y-full transition-transform duration-300"
+            >
+                <div class="px-4 py-4 space-y-4">
+                    <a
+                        href="#home"
+                        class="block text-gray-700 hover:text-brown-primary font-medium"
+                        >Home</a
+                    >
+                    <a
+                        href="#products"
+                        class="block text-gray-700 hover:text-brown-primary font-medium"
+                        >Products</a
+                    >
+                    <a
+                        href="#gallery"
+                        class="block text-gray-700 hover:text-brown-primary font-medium"
+                        >Gallery</a
+                    >
+                    <a
+                        href="#about"
+                        class="block text-gray-700 hover:text-brown-primary font-medium"
+                        >About</a
+                    >
+                    <a
+                        href="#contact"
+                        class="block text-gray-700 hover:text-brown-primary font-medium"
+                        >Contact</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section
+            id="home"
+            class="min-h-screen flex items-center justify-center bg-gradient-to-br from-brown-light to-cream relative overflow-hidden"
+        >
+            <div class="absolute inset-0 opacity-10">
+                <div
+                    class="absolute top-20 left-20 w-32 h-32 bg-brown-primary rounded-full animate-float"
+                ></div>
+                <div
+                    class="absolute bottom-20 right-20 w-24 h-24 bg-brown-secondary rounded-full animate-float-delayed"
+                ></div>
+            </div>
+
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+            >
+                <h1
+                    class="text-5xl md:text-7xl font-bold text-brown-primary mb-6 fade-in-up"
+                >
+                    Crafted with
+                    <span class="text-brown-secondary">Precision</span>
+                </h1>
+                <p
+                    class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto fade-in-up delay-200"
+                >
+                    Premium custom furniture that transforms your space. From
+                    elegant beds to designer chairs, we create pieces that tell
+                    your story.
+                </p>
+
+                <div
+                    class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up delay-400"
+                >
+                    <a
+                        href="tel:+919876543210"
+                        class="btn-primary text-lg px-8 py-4"
+                    >
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now: +91 98765 43210
+                    </a>
+                    <a
+                        href="https://wa.me/919876543210?text=Hi%20CraftWood,%20I'm%20interested%20in%20your%20furniture%20services"
+                        target="_blank"
+                        class="btn-secondary text-lg px-8 py-4"
+                    >
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        WhatsApp Us
+                    </a>
+                </div>
+
+                <div
+                    class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 fade-in-up delay-600"
+                >
+                    <div class="text-center stats-card">
+                        <div
+                            class="text-3xl font-bold text-brown-primary mb-2 counter"
+                            data-target="500"
+                        >
+                            0
+                        </div>
+                        <div class="text-gray-600">Happy Customers</div>
+                    </div>
+                    <div class="text-center stats-card">
+                        <div
+                            class="text-3xl font-bold text-brown-primary mb-2 counter"
+                            data-target="1000"
+                        >
+                            0
+                        </div>
+                        <div class="text-gray-600">Furniture Pieces</div>
+                    </div>
+                    <div class="text-center stats-card">
+                        <div
+                            class="text-3xl font-bold text-brown-primary mb-2 counter"
+                            data-target="15"
+                        >
+                            0
+                        </div>
+                        <div class="text-gray-600">Years Experience</div>
+                    </div>
+                    <div class="text-center stats-card">
+                        <div
+                            class="text-3xl font-bold text-brown-primary mb-2 counter"
+                            data-target="50"
+                        >
+                            0
+                        </div>
+                        <div class="text-gray-600">Expert Craftsmen</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="products" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl font-bold text-brown-primary mb-4">
+                        Our Signature Collections
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        From elegant beds to custom TV units, we create
+                        furniture that transforms your space
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
+                    <div class="product-card scale-in">
+                        <div
+                            class="product-image"
+                            style="
+                                background-image: url(&quot;https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&quot;);
+                            "
+                        ></div>
+                        <div class="product-content">
+                            <h3 class="product-title">Custom Beds</h3>
+                            <p class="product-price">Starting from ₹25,000</p>
+                            <p class="product-description">
+                                King, Queen, Single sizes available
+                            </p>
+                            <button
+                                class="btn-outline w-full mt-4"
+                                onclick="openCustomModal()"
+                            >
+                                Customize This Design
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card scale-in delay-100">
+                        <div
+                            class="product-image"
+                            style="
+                                background-image: url(&quot;https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&quot;);
+                            "
+                        ></div>
+                        <div class="product-content">
+                            <h3 class="product-title">Designer Chairs</h3>
+                            <p class="product-price">Starting from ₹8,000</p>
+                            <p class="product-description">
+                                Dining, Office, Accent chairs
+                            </p>
+                            <button
+                                class="btn-outline w-full mt-4"
+                                onclick="openCustomModal()"
+                            >
+                                Customize This Design
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card scale-in delay-200">
+                        <div
+                            class="product-image"
+                            style="
+                                background-image: url(&quot;https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&quot;);
+                            "
+                        ></div>
+                        <div class="product-content">
+                            <h3 class="product-title">TV Units</h3>
+                            <p class="product-price">Starting from ₹15,000</p>
+                            <p class="product-description">
+                                Wall-mounted, Floor standing
+                            </p>
+                            <button
+                                class="btn-outline w-full mt-4"
+                                onclick="openCustomModal()"
+                            >
+                                Customize This Design
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card scale-in delay-300">
+                        <div
+                            class="product-image"
+                            style="
+                                background-image: url(&quot;https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&quot;);
+                            "
+                        ></div>
+                        <div class="product-content">
+                            <h3 class="product-title">Custom Pieces</h3>
+                            <p class="product-price">Price on request</p>
+                            <p class="product-description">
+                                Tailored to your vision
+                            </p>
+                            <button
+                                class="btn-outline w-full mt-4"
+                                onclick="openCustomModal()"
+                            >
+                                Customize This Design
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 bg-cream">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl font-bold text-brown-primary mb-4">
+                        Our Masterpieces
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Explore our gallery of completed projects and custom
+                        creations
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    id="gallery-grid"
+                >
+                    <!-- Gallery items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                >
+                    <div class="fade-in-left">
+                        <h2 class="text-4xl font-bold text-brown-primary mb-6">
+                            Our Story
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            For over 15 years, CraftWood has been creating
+                            exceptional furniture that combines traditional
+                            craftsmanship with modern design. Every piece tells
+                            a story of dedication, quality, and attention to
+                            detail.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-8">
+                            Our team of skilled artisans works with premium
+                            materials to bring your vision to life, ensuring
+                            each piece is not just furniture, but a work of art
+                            that enhances your living space.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="text-center">
+                                <i
+                                    class="fas fa-users text-3xl text-brown-primary mb-2"
+                                ></i>
+                                <h3 class="font-semibold text-lg">
+                                    Expert Team
+                                </h3>
+                                <p class="text-gray-600">
+                                    50+ skilled craftsmen
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <i
+                                    class="fas fa-clock text-3xl text-brown-primary mb-2"
+                                ></i>
+                                <h3 class="font-semibold text-lg">
+                                    Fast Delivery
+                                </h3>
+                                <p class="text-gray-600">
+                                    2-4 weeks completion
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <i
+                                    class="fas fa-star text-3xl text-brown-primary mb-2"
+                                ></i>
+                                <h3 class="font-semibold text-lg">
+                                    Premium Quality
+                                </h3>
+                                <p class="text-gray-600">Top-grade materials</p>
+                            </div>
+                            <div class="text-center">
+                                <i
+                                    class="fas fa-award text-3xl text-brown-primary mb-2"
+                                ></i>
+                                <h3 class="font-semibold text-lg">Warranty</h3>
+                                <p class="text-gray-600">5-year guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 fade-in-right">
+                        <div
+                            class="about-image"
+                            style="
+                                background-image: url(&quot;https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&quot;);
+                            "
+                        ></div>
+                        <div
+                            class="about-image"
+                            style="
+                                background-image: url(&quot;https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&quot;);
+                            "
+                        ></div>
+                        <div
+                            class="about-image"
+                            style="
+                                background-image: url(&quot;https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&quot;);
+                            "
+                        ></div>
+                        <div
+                            class="about-image"
+                            style="
+                                background-image: url(&quot;https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&quot;);
+                            "
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-cream">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl font-bold text-brown-primary mb-4">
+                        Get In Touch
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Ready to bring your furniture vision to life? Contact us
+                        today for a free consultation
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="contact-card fade-in-left">
+                        <i
+                            class="fas fa-phone text-4xl text-brown-primary mb-4"
+                        ></i>
+                        <h3 class="text-xl font-semibold mb-2">Call Us</h3>
+                        <a
+                            href="tel:+919876543210"
+                            class="text-brown-primary hover:text-brown-secondary text-lg font-medium"
+                        >
+                            +91 98765 43210
+                        </a>
+                    </div>
+
+                    <div class="contact-card fade-in-up">
+                        <i
+                            class="fab fa-whatsapp text-4xl text-green-500 mb-4"
+                        ></i>
+                        <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
+                        <a
+                            href="https://wa.me/919876543210?text=Hi%20CraftWood,%20I'm%20interested%20in%20your%20furniture%20services"
+                            target="_blank"
+                            class="text-green-500 hover:text-green-600 text-lg font-medium"
+                        >
+                            Chat with us
+                        </a>
+                    </div>
+
+                    <div class="contact-card fade-in-right">
+                        <i
+                            class="fas fa-map-marker-alt text-4xl text-brown-primary mb-4"
+                        ></i>
+                        <h3 class="text-xl font-semibold mb-2">
+                            Visit Showroom
+                        </h3>
+                        <p class="text-gray-600">123 Craftsman Lane</p>
+                        <p class="text-gray-600">
+                            Furniture District, City 560001
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center space-y-4 scale-in">
+                    <a
+                        href="tel:+919876543210"
+                        class="btn-primary text-lg px-8 py-4 mr-4"
+                    >
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <a
+                        href="https://wa.me/919876543210?text=Hi%20CraftWood,%20I'd%20like%20to%20discuss%20a%20custom%20furniture%20project"
+                        target="_blank"
+                        class="btn-secondary text-lg px-8 py-4"
+                    >
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-brown-dark text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <i
+                                class="fas fa-hammer text-2xl text-brown-secondary"
+                            ></i>
+                            <span class="text-2xl font-bold">CraftWood</span>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Premium custom furniture crafted with precision and
+                            passion.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-brown-secondary"
+                                ><i class="fab fa-facebook"></i
+                            ></a>
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-brown-secondary"
+                                ><i class="fab fa-instagram"></i
+                            ></a>
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-brown-secondary"
+                                ><i class="fab fa-twitter"></i
+                            ></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#home"
+                                    class="text-gray-300 hover:text-brown-secondary"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#products"
+                                    class="text-gray-300 hover:text-brown-secondary"
+                                    >Products</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#gallery"
+                                    class="text-gray-300 hover:text-brown-secondary"
+                                    >Gallery</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#about"
+                                    class="text-gray-300 hover:text-brown-secondary"
+                                    >About</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Services</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-gray-300 hover:text-brown-secondary"
+                                    >Custom Furniture</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-gray-300 hover:text-brown-secondary"
+                                    >Interior Design</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-gray-300 hover:text-brown-secondary"
+                                    >Furniture Repair</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="text-gray-300 hover:text-brown-secondary"
+                                    >Consultation</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                        <div class="space-y-2">
+                            <p class="text-gray-300">
+                                <i class="fas fa-phone mr-2"></i> +91 98765
+                                43210
+                            </p>
+                            <p class="text-gray-300">
+                                <i class="fas fa-envelope mr-2"></i>
+                                info@craftwood.com
+                            </p>
+                            <p class="text-gray-300">
+                                <i class="fas fa-map-marker-alt mr-2"></i> 123
+                                Craftsman Lane, City 560001
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                    <p class="text-gray-300">
+                        &copy; 2024 CraftWood. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Custom Furniture Modal -->
+        <div id="custom-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeCustomModal()"
+                    >&times;</span
+                >
+                <h2 class="text-2xl font-bold text-brown-primary mb-6">
+                    Custom Furniture Inquiry
+                </h2>
+                <form id="custom-form">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" name="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Phone *</label>
+                        <input type="tel" name="phone" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" />
+                    </div>
+                    <div class="form-group">
+                        <label>Furniture Type *</label>
+                        <select name="furnitureType" required>
+                            <option value="">Select Type</option>
+                            <option value="bed">Bed</option>
+                            <option value="chair">Chair</option>
+                            <option value="tv-unit">TV Unit</option>
+                            <option value="custom">Custom Piece</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Budget Range</label>
+                        <select name="budget">
+                            <option value="">Select Budget</option>
+                            <option value="under-10k">Under ₹10,000</option>
+                            <option value="10k-25k">₹10,000 - ₹25,000</option>
+                            <option value="25k-50k">₹25,000 - ₹50,000</option>
+                            <option value="above-50k">Above ₹50,000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Description *</label>
+                        <textarea
+                            name="description"
+                            rows="4"
+                            placeholder="Describe your requirements..."
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">
+                        Submit Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

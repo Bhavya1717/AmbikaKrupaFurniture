@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CraftWood Custom Furniture</title>
+    <meta name="description" content="Contact CraftWood for custom furniture consultation. Call +91 98765 43210, WhatsApp us, or visit our showroom at 123 Craftsman Lane, City 560001.">
+    
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter bg-white">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i id="logo-icon" class="fas fa-hammer text-2xl text-brown-primary transition-transform duration-300"></i>
+                    <span class="text-2xl font-bold text-brown-primary">CraftWood</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">Home</a>
+                    <a href="products.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">Products</a>
+                    <a href="gallery.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">Gallery</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">About</a>
+                    <a href="contact.html" class="nav-link text-brown-primary font-medium transition-all duration-300">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="tel:+919876543210" class="btn-primary hidden sm:inline-flex">
+                        <i class="fas fa-phone mr-2"></i>
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-brown-light to-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-brown-primary mb-6 fade-in-up">Contact Us</h1>
+            <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto fade-in-up delay-200">
+                Ready to bring your furniture vision to life? Get in touch with our expert team today
+            </p>
+        </div>
+    </section>
+
+    <!-- Quick Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="contact-card fade-in-left">
+                    <i class="fas fa-phone text-4xl text-brown-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Call Us Now</h3>
+                    <p class="text-gray-600 mb-4">Speak directly with our experts</p>
+                    <a href="tel:+919876543210" class="text-brown-primary hover:text-brown-secondary text-lg font-medium">
+                        +91 98765 43210
+                    </a>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-500">Mon-Sat: 9:00 AM - 7:00 PM</p>
+                        <p class="text-sm text-gray-500">Sunday: 10:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-card fade-in-up">
+                    <i class="fab fa-whatsapp text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">WhatsApp Chat</h3>
+                    <p class="text-gray-600 mb-4">Get instant responses</p>
+                    <a href="https://wa.me/919876543210?text=Hi%20CraftWood,%20I'm%20interested%20in%20your%20furniture%20services" 
+                       target="_blank" class="text-green-500 hover:text-green-600 text-lg font-medium">
+                        Start Chat
+                    </a>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-500">Available 24/7</p>
+                        <p class="text-sm text-gray-500">Quick responses guaranteed</p>
+                    </div>
+                </div>
+
+                <div class="contact-card fade-in-right">
+                    <i class="fas fa-map-marker-alt text-4xl text-brown-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Visit Our Showroom</h3>
+                    <p class="text-gray-600 mb-4">See our work in person</p>
+                    <div class="text-gray-700">
+                        <p>123 Craftsman Lane</p>
+                        <p>Furniture District</p>
+                        <p>City 560001</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://maps.google.com" target="_blank" class="text-brown-primary hover:text-brown-secondary text-sm font-medium">
+                            <i class="fas fa-directions mr-1"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-4xl font-bold text-brown-primary mb-4">Send Us a Message</h2>
+                <p class="text-lg text-gray-600">
+                    Fill out the form below and we'll get back to you within 24 hours
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-xl p-8 fade-in-up delay-200">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="custom-furniture">Custom Furniture</option>
+                                <option value="interior-design">Interior Design</option>
+                                <option value="furniture-repair">Furniture Repair</option>
+                                <option value="consultation">Consultation</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Budget Range</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="under-25k">Under ₹25,000</option>
+                            <option value="25k-50k">₹25,000 - ₹50,000</option>
+                            <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                            <option value="1l-2l">₹1,00,000 - ₹2,00,000</option>
+                            <option value="above-2l">Above ₹2,00,000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  placeholder="Tell us about your project requirements, preferred materials, dimensions, timeline, etc."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" class="text-brown-primary" required>
+                            <span class="text-sm text-gray-600">
+                                I agree to receive communications from CraftWood regarding my inquiry
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary w-full text-lg py-4">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-4xl font-bold text-brown-primary mb-4">Find Our Showroom</h2>
+                <p class="text-lg text-gray-600">
+                    Visit us to see our furniture collection and meet our team
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-left">
+                    <div class="bg-gray-200 h-80 rounded-xl flex items-center justify-center">
+                        <div class="text-center text-gray-500">
+                            <i class="fas fa-map-marked-alt text-6xl mb-4"></i>
+                            <p class="text-lg">Interactive Map</p>
+                            <p class="text-sm">Google Maps integration would go here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in-right">
+                    <h3 class="text-2xl font-bold text-brown-primary mb-6">Showroom Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt text-brown-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Address</h4>
+                                <p class="text-gray-600">123 Craftsman Lane, Furniture District, City 560001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-clock text-brown-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Opening Hours</h4>
+                                <div class="text-gray-600 space-y-1">
+                                    <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                                    <p>Sunday: 10:00 AM - 5:00 PM</p>
+                                    <p class="text-sm text-brown-primary">*Closed on public holidays</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-car text-brown-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Parking</h4>
+                                <p class="text-gray-600">Free parking available for customers</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-info-circle text-brown-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">What to Expect</h4>
+                                <ul class="text-gray-600 space-y-1">
+                                    <li>• Live furniture displays</li>
+                                    <li>• Material samples</li>
+                                    <li>• Design consultation</li>
+                                    <li>• Portfolio viewing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 space-y-4">
+                        <a href="tel:+919876543210" class="btn-primary w-full text-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            Call Before Visiting
+                        </a>
+                        <a href="https://wa.me/919876543210?text=Hi%20CraftWood,%20I'd%20like%20to%20schedule%20a%20showroom%20visit" 
+                           target="_blank" class="btn-outline w-full text-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Schedule a Visit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-4xl font-bold text-brown-primary mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600">
+                    Quick answers to common questions about our services
+                </p>
+            </div>
+            
+            <div class="space-y-4 fade-in-up delay-200">
+                <div class="faq-item bg-white rounded-lg p-6">
+                    <h3 class="font-semibold text-brown-primary mb-2 cursor-pointer flex justify-between items-center">
+                        How long does a custom furniture project take?
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <div class="faq-answer text-gray-600">
+                        <p>Project timelines vary based on complexity and size. Simple pieces like chairs take 1-2 weeks, while complete room sets can take 4-6 weeks. We provide detailed timelines during consultation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white rounded-lg p-6">
+                    <h3 class="font-semibold text-brown-primary mb-2 cursor-pointer flex justify-between items-center">
+                        Do you provide home delivery and installation?
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <div class="faq-answer text-gray-600 hidden">
+                        <p>Yes, we provide free delivery within the city and professional installation for all our furniture. Our team ensures your furniture is properly set up and positioned.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white rounded-lg p-6">
+                    <h3 class="font-semibold text-brown-primary mb-2 cursor-pointer flex justify-between items-center">
+                        What materials do you use?
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <div class="faq-answer text-gray-600 hidden">
+                        <p>We use premium quality materials including solid wood (oak, teak, mahogany), engineered wood, and high-grade hardware. All materials are sourced from certified suppliers.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white rounded-lg p-6">
+                    <h3 class="font-semibold text-brown-primary mb-2 cursor-pointer flex justify-between items-center">
+                        Do you offer warranty on your furniture?
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <div class="faq-answer text-gray-600 hidden">
+                        <p>Yes, we provide a 5-year warranty on all structural components and 2-year warranty on hardware and finishes. We also offer free maintenance service for the first year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brown-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-hammer text-2xl text-brown-secondary"></i>
+                        <span class="text-2xl font-bold">CraftWood</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">Premium custom furniture crafted with precision and passion.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-brown-secondary"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-brown-secondary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-brown-secondary"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-brown-secondary">Home</a></li>
+                        <li><a href="products.html" class="text-gray-300 hover:text-brown-secondary">Products</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-brown-secondary">Gallery</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-brown-secondary">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Custom Furniture</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Interior Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Furniture Repair</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-300"><i class="fas fa-phone mr-2"></i> +91 98765 43210</p>
+                        <p class="text-gray-300"><i class="fas fa-envelope mr-2"></i> info@craftwood.com</p>
+                        <p class="text-gray-300"><i class="fas fa-map-marker-alt mr-2"></i> 123 Craftsman Lane, City 560001</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 CraftWood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
