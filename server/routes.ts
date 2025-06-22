@@ -1,28 +1,29 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { setupAuth, isAuthenticated } from "./replitAuth";
+// import { setupAuth, allowAll } from "./replitAuth";
 import { insertProductSchema, insertProjectSchema, insertInquirySchema, insertContactSchema } from "@shared/schema";
 import { z } from "zod";
 
+const allowAll = (_req: any, _res: any, next: any) => next();
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth middleware
-  await setupAuth(app);
+  // await setupAuth(app);
 
   // Auth routes
-  app.get('/api/auth/user', isAuthenticated, async (req: any, res) => {
-    try {
-      const userId = req.user.claims.sub;
-      const user = await storage.getUser(userId);
-      res.json(user);
-    } catch (error) {
-      console.error("Error fetching user:", error);
-      res.status(500).json({ message: "Failed to fetch user" });
-    }
-  });
+  app.get('/api/auth/user', allowAll, async (req: any, res) => {
+  try {
+    // You don't have Replit's `req.user` anymore, so just return dummy for now
+    res.json({ message: "No auth. Firebase auth will be added soon." });
+  } catch (error) {
+    console.error("Error fetching user:", error);
+    res.status(500).json({ message: "Failed to fetch user" });
+  }
+});
 
   // Category routes
-  app.get("/api/categories", async (req, res) => {
+  app.get("/api/user/categories", async (req, res) => {
     try {
       const categories = await storage.getCategories();
       res.json(categories);
@@ -33,7 +34,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Product routes
-  app.get("/api/products", async (req, res) => {
+  app.get("/api/user/products", async (req, res) => {
     try {
       const categoryId = req.query.categoryId ? parseInt(req.query.categoryId as string) : null;
       const featured = req.query.featured === 'true';
@@ -54,7 +55,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/products/:id", async (req, res) => {
+  app.get("/api/user/products/:id", async (req, res) => {
     try {
       const id = parseInt(req.params.id);
       const product = await storage.getProduct(id);
@@ -69,7 +70,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Project/Gallery routes
-  app.get("/api/projects", async (req, res) => {
+  app.get("/api/user/projects", async (req, res) => {
     try {
       const featured = req.query.featured === 'true';
       const projects = featured ? await storage.getFeaturedProjects() : await storage.getProjects();
@@ -81,7 +82,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Inquiry routes
-  app.post("/api/inquiries", async (req, res) => {
+  app.post("/api/user/inquiries", async (req, res) => {
     try {
       const validatedData = insertInquirySchema.parse(req.body);
       const inquiry = await storage.createInquiry(validatedData);
@@ -95,7 +96,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/inquiries", isAuthenticated, async (req, res) => {
+  app.get("/api/user/inquiries", allowAll, async (req, res) => {
     try {
       const inquiries = await storage.getInquiries();
       res.json(inquiries);
@@ -106,7 +107,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Contact routes
-  app.post("/api/contacts", async (req, res) => {
+  app.post("/api/user/contacts", async (req, res) => {
     try {
       const validatedData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(validatedData);
@@ -120,7 +121,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/contacts", isAuthenticated, async (req, res) => {
+  app.get("/api/user/contacts", allowAll, async (req, res) => {
     try {
       const contacts = await storage.getContacts();
       res.json(contacts);
