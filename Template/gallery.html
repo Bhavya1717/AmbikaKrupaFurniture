@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - CraftWood Custom Furniture Projects</title>
+    <meta name="description" content="Browse CraftWood's gallery of completed custom furniture projects. See our beds, chairs, TV units, and unique custom pieces in real homes.">
+    
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter bg-white">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i id="logo-icon" class="fas fa-hammer text-2xl text-brown-primary transition-transform duration-300"></i>
+                    <span class="text-2xl font-bold text-brown-primary">CraftWood</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">Home</a>
+                    <a href="products.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">Products</a>
+                    <a href="gallery.html" class="nav-link text-brown-primary font-medium transition-all duration-300">Gallery</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">About</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="tel:+919876543210" class="btn-primary hidden sm:inline-flex">
+                        <i class="fas fa-phone mr-2"></i>
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-brown-light to-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-brown-primary mb-6 fade-in-up">Our Gallery</h1>
+            <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto fade-in-up delay-200">
+                Explore our collection of completed projects and see how we transform spaces with custom furniture
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-12 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4 fade-in-up">
+                <button class="gallery-filter-btn active" data-category="all">All Projects</button>
+                <button class="gallery-filter-btn" data-category="Bedroom">Bedroom</button>
+                <button class="gallery-filter-btn" data-category="Living Room">Living Room</button>
+                <button class="gallery-filter-btn" data-category="Dining">Dining</button>
+                <button class="gallery-filter-btn" data-category="Office">Office</button>
+                <button class="gallery-filter-btn" data-category="Kitchen">Kitchen</button>
+                <button class="gallery-filter-btn" data-category="Kids">Kids Room</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-brown-primary mb-6 fade-in-up">Inspired by Our Work?</h2>
+            <p class="text-lg text-gray-600 mb-8 fade-in-up delay-200">
+                Let's create something beautiful for your space. Contact us to discuss your custom furniture project.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center scale-in delay-400">
+                <a href="tel:+919876543210" class="btn-primary text-lg px-8 py-4">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call: +91 98765 43210
+                </a>
+                <a href="https://wa.me/919876543210?text=Hi%20CraftWood,%20I%20saw%20your%20gallery%20and%20I'm%20interested%20in%20custom%20furniture" 
+                   target="_blank" class="btn-secondary text-lg px-8 py-4">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brown-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-hammer text-2xl text-brown-secondary"></i>
+                        <span class="text-2xl font-bold">CraftWood</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">Premium custom furniture crafted with precision and passion.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-brown-secondary"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-brown-secondary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-brown-secondary"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-brown-secondary">Home</a></li>
+                        <li><a href="products.html" class="text-gray-300 hover:text-brown-secondary">Products</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-brown-secondary">Gallery</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-brown-secondary">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Custom Furniture</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Interior Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Furniture Repair</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-300"><i class="fas fa-phone mr-2"></i> +91 98765 43210</p>
+                        <p class="text-gray-300"><i class="fas fa-envelope mr-2"></i> info@craftwood.com</p>
+                        <p class="text-gray-300"><i class="fas fa-map-marker-alt mr-2"></i> 123 Craftsman Lane, City 560001</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 CraftWood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content max-w-4xl">
+            <span class="close-modal" onclick="closeGalleryModal()">&times;</span>
+            <div id="modal-content">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
