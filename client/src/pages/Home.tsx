@@ -32,32 +32,32 @@ export default function Home() {
     <div className="min-h-screen bg-antique">
       <Navbar />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 nav-space">
         {/* Welcome Section */}
         <div className="mb-12">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <h1 className="text-4xl font-bold text-brown-primary mb-2">
+              <h1 className="text-2xl sm:text-4xl font-bold text-brown-primary mb-2">
                 Welcome back, {user?.displayName || 'Admin'}!
               </h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-base sm:text-lg text-gray-600">
                 Manage your CraftWood business dashboard
               </p>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <div className="flex items-center space-x-3">
                 {user?.photoURL && (
-                  <img 
-                    src={user.photoURL} 
-                    alt="Profile" 
-                    className="h-12 w-12 rounded-full object-cover"
+                  <img
+                    src={user.photoURL}
+                    alt="Profile"
+                    className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
                   />
                 )}
                 <div>
-                  <p className="font-medium text-gray-900">
+                  <p className="font-medium text-gray-900 text-sm sm:text-base">
                     {user?.displayName}
                   </p>
-                  <p className="text-sm text-gray-500">{user?.email}</p>
+                  <p className="text-xs sm:text-sm text-gray-500">{user?.email}</p>
                 </div>
               </div>
               <Button 

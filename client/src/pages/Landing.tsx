@@ -18,13 +18,33 @@ import { useQuery } from "@tanstack/react-query";
 import type { Product, Project } from "@shared/schema";
 
 export default function Landing() {
-  const { data: featuredProducts } = useQuery<Product[]>({
-    queryKey: ["/api/products?featured=true"],
-  });
-
-  const { data: featuredProjects } = useQuery<Project[]>({
-    queryKey: ["/api/projects?featured=true"],
-  });
+  const featuredProjects = [
+    {
+      id: 1,
+      title: "Modern Kitchen",
+      description: "A sleek kitchen with modern finishes.",
+      category: "Interior",
+      imageUrl:
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    },
+    {
+      id: 2,
+      title: "Rustic Living Room",
+      description: "Warm and cozy with wooden touches.",
+      category: "Furniture",
+      imageUrl:
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    },
+    {
+      id: 3,
+      title: "Modern Kitchen",
+      description: "A sleek kitchen with modern finishes.",
+      category: "Interior",
+      imageUrl:
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    },
+    // ...add more for testing
+  ];
 
   useEffect(() => {
     const observerOptions = {
@@ -53,7 +73,7 @@ export default function Landing() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-screen flex items-center justify-center pt-16">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -225,7 +245,7 @@ export default function Landing() {
                 }`}
               >
                 <div
-                  className="h-80 bg-cover bg-center rounded-t-lg group-hover:scale-110 transition-transform duration-300"
+                  className="h-80 bg-cover bg-center rounded-t-lg group-hover:scale-105 transition-transform duration-300"
                   style={{
                     backgroundImage: `url(${project.imageUrl || "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"})`,
                   }}
@@ -305,28 +325,28 @@ export default function Landing() {
 
             <div className="grid grid-cols-2 gap-4 fade-in-right">
               <div
-                className="h-48 bg-cover bg-center rounded-xl"
+                className="h-48 bg-cover bg-center rounded-xl duration-300 hover:scale-105"
                 style={{
                   backgroundImage:
                     "url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300')",
                 }}
               />
               <div
-                className="h-48 bg-cover bg-center rounded-xl mt-8"
+                className="h-48 bg-cover bg-center rounded-xl mt-8 duration-300 hover:scale-105"
                 style={{
                   backgroundImage:
                     "url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300')",
                 }}
               />
               <div
-                className="h-48 bg-cover bg-center rounded-xl -mt-8"
+                className="h-48 bg-cover bg-center rounded-xl -mt-8 duration-300 hover:scale-105"
                 style={{
                   backgroundImage:
                     "url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300')",
                 }}
               />
               <div
-                className="h-48 bg-cover bg-center rounded-xl"
+                className="h-48 bg-cover bg-center rounded-xl duration-300 hover:scale-105"
                 style={{
                   backgroundImage:
                     "url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300')",

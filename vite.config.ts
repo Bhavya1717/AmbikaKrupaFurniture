@@ -4,15 +4,21 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  root: "client",              // <-- IMPORTANT
+  root: "client",
   build: {
-      outDir: "../dist/public", // ✅ Build output path
+    outDir: "../dist/public",
     emptyOutDir: true,
   },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client/src"),
       "@shared": path.resolve(__dirname, "shared")
+    },
+  },
+  server: {
+    open: true,
+    watch: {
+      usePolling: true,
     },
   },
 });
