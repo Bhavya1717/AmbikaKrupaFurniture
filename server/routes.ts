@@ -4,6 +4,7 @@ import { storage } from "./storage";
 // import { setupAuth, allowAll } from "./replitAuth";
 import { insertProductSchema, insertProjectSchema, insertInquirySchema, insertContactSchema } from "@shared/schema";
 import { z } from "zod";
+import { getAboutSection } from "./aboutService"; // <-- Added import
 
 const allowAll = (_req: any, _res: any, next: any) => next();
 
@@ -13,14 +14,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Auth routes
   app.get('/api/auth/user', allowAll, async (req: any, res) => {
-  try {
-    // You don't have Replit's `req.user` anymore, so just return dummy for now
-    res.json({ message: "No auth. Firebase auth will be added soon." });
-  } catch (error) {
-    console.error("Error fetching user:", error);
-    res.status(500).json({ message: "Failed to fetch user" });
-  }
-});
+    try {
+      // You don't have Replit's `req.user` anymore, so just return dummy for now
+      res.json({ message: "No auth. Firebase auth will be added soon." });
+    } catch (error) {
+      console.error("Error fetching user:", error);
+      res.status(500).json({ message: "Failed to fetch user" });
+    }
+  });
+
+  // ✅ About section route
+  app.get("/api/about", async (req, res) => {
+    console.log("📥 GET /api/about called"); // Debug
+    try {
+      const about = await getAboutSection();
+      console.log("DB result:", about); // Debug
+
+      if (!about) {
+        return res.status(404).json({ message: "About section not found" });
+      }
+
+      res.json(about);
+    } catch (error) {
+      console.error("Error fetching about section:", error);
+      res.status(500).json({ message: "Failed to fetch about section" });
+    }
+  });
 
   // Category routes
   app.get("/api/user/categories", async (req, res) => {
@@ -36,9 +55,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Product routes
   app.get("/api/user/products", async (req, res) => {
     try {
-      const categoryId = req.query.categoryId ? parseInt(req.query.categoryId as string) : null;
+      const categoryId = req.query.categoryId ? String(req.query.categoryId) : null;
       const featured = req.query.featured === 'true';
-      
+
       let products;
       if (featured) {
         products = await storage.getFeaturedProducts();
@@ -47,7 +66,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } else {
         products = await storage.getProducts();
       }
-      
+
       res.json(products);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -57,7 +76,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/user/products/:id", async (req, res) => {
     try {
-      const id = parseInt(req.params.id);
+      const id = String(req.params.id);
       const product = await storage.getProduct(id);
       if (!product) {
         return res.status(404).json({ message: "Product not found" });
@@ -68,6 +87,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ message: "Failed to fetch product" });
     }
   });
+
 
   // Project/Gallery routes
   app.get("/api/user/projects", async (req, res) => {

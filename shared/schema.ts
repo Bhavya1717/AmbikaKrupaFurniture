@@ -1,3 +1,4 @@
+// About Sections table for About page content
 import {
   pgTable,
   text,
@@ -38,7 +39,7 @@ export const users = pgTable("users", {
 
 // Product categories
 export const categories = pgTable("categories", {
-  id: serial("id").primaryKey(),
+  id: varchar("id", { length: 64 }).primaryKey(),
   name: varchar("name", { length: 100 }).notNull(),
   slug: varchar("slug", { length: 100 }).notNull().unique(),
   description: text("description"),
@@ -48,11 +49,11 @@ export const categories = pgTable("categories", {
 
 // Products table
 export const products = pgTable("products", {
-  id: serial("id").primaryKey(),
+  id: varchar("id", { length: 64 }).primaryKey(),
   name: varchar("name", { length: 200 }).notNull(),
   description: text("description"),
   price: decimal("price", { precision: 10, scale: 2 }).notNull(),
-  categoryId: integer("category_id").references(() => categories.id),
+  categoryId: varchar("category_id", { length: 64 }),
   imageUrl: text("image_url"),
   dimensions: text("dimensions"),
   material: varchar("material", { length: 100 }),
@@ -65,7 +66,7 @@ export const products = pgTable("products", {
 
 // Gallery projects
 export const projects = pgTable("projects", {
-  id: serial("id").primaryKey(),
+  id: varchar("id", { length: 64 }).primaryKey(),
   title: varchar("title", { length: 200 }).notNull(),
   description: text("description"),
   imageUrl: text("image_url").notNull(),
@@ -77,8 +78,8 @@ export const projects = pgTable("projects", {
 
 // Custom furniture inquiries
 export const inquiries = pgTable("inquiries", {
-  id: serial("id").primaryKey(),
-  userId: varchar("user_id").references(() => users.id),
+  id: varchar("id", { length: 64 }).primaryKey(),
+  userId: varchar("user_id", { length: 64 }),
   name: varchar("name", { length: 100 }).notNull(),
   email: varchar("email", { length: 100 }).notNull(),
   phone: varchar("phone", { length: 20 }),
@@ -94,7 +95,7 @@ export const inquiries = pgTable("inquiries", {
 
 // Contact form submissions
 export const contacts = pgTable("contacts", {
-  id: serial("id").primaryKey(),
+  id: varchar("id", { length: 64 }).primaryKey(),
   firstName: varchar("first_name", { length: 100 }).notNull(),
   lastName: varchar("last_name", { length: 100 }).notNull(),
   email: varchar("email", { length: 100 }).notNull(),
@@ -104,6 +105,20 @@ export const contacts = pgTable("contacts", {
   message: text("message").notNull(),
   status: varchar("status", { length: 50 }).default("new"),
   createdAt: timestamp("created_at").defaultNow(),
+});
+
+// About sections
+export const aboutSections = pgTable("about_sections", {
+  id: integer("id").primaryKey(),
+  title: text("title"),
+  paragraph1: text("paragraph1"),
+  paragraph2: text("paragraph2"),
+  paragraph3: text("paragraph3"),
+  projects_completed: integer("projects_completed"),
+  years_experience: integer("years_experience"),
+  satisfaction_rate: integer("satisfaction_rate"),
+  support: text("support"),
+  image_urls: text("image_urls"), // or use array if needed
 });
 
 // Relations

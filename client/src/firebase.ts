@@ -1,6 +1,8 @@
 // src/firebase.ts
+
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, setPersistence, browserLocalPersistence } from "firebase/auth";
+import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA8d5Nc8IqDC6P2YjM1Lp7HX0r-_aaqFLU",
@@ -15,7 +17,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+const database = getDatabase(app, "https://ambika-55-default-rtdb.asia-southeast1.firebasedatabase.app/");
 
 setPersistence(auth, browserLocalPersistence); // session saved until manual logout
 
-export { auth, provider };
+export { auth, provider, firebaseConfig, database };

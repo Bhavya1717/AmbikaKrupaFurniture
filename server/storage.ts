@@ -25,28 +25,28 @@ export interface IStorage {
   // User operations (required for Replit Auth)
   getUser(id: string): Promise<User | undefined>;
   upsertUser(user: UpsertUser): Promise<User>;
-  
+
   // Category operations
   getCategories(): Promise<Category[]>;
   createCategory(category: InsertCategory): Promise<Category>;
-  
+
   // Product operations
   getProducts(): Promise<Product[]>;
-  getProductsByCategory(categoryId: number): Promise<Product[]>;
+  getProductsByCategory(categoryId: string): Promise<Product[]>;
   getFeaturedProducts(): Promise<Product[]>;
-  getProduct(id: number): Promise<Product | undefined>;
+  getProduct(id: string): Promise<Product | undefined>;
   createProduct(product: InsertProduct): Promise<Product>;
-  
+
   // Project operations
   getProjects(): Promise<Project[]>;
   getFeaturedProjects(): Promise<Project[]>;
   createProject(project: InsertProject): Promise<Project>;
-  
+
   // Inquiry operations
   getInquiries(): Promise<Inquiry[]>;
-  getInquiry(id: number): Promise<Inquiry | undefined>;
+  getInquiry(id: string): Promise<Inquiry | undefined>;
   createInquiry(inquiry: InsertInquiry): Promise<Inquiry>;
-  
+
   // Contact operations
   getContacts(): Promise<Contact[]>;
   createContact(contact: InsertContact): Promise<Contact>;
@@ -89,7 +89,7 @@ export class DatabaseStorage implements IStorage {
     return await db.select().from(products).orderBy(desc(products.createdAt));
   }
 
-  async getProductsByCategory(categoryId: number): Promise<Product[]> {
+  async getProductsByCategory(categoryId: string): Promise<Product[]> {
     return await db
       .select()
       .from(products)
@@ -105,7 +105,7 @@ export class DatabaseStorage implements IStorage {
       .orderBy(desc(products.createdAt));
   }
 
-  async getProduct(id: number): Promise<Product | undefined> {
+  async getProduct(id: string): Promise<Product | undefined> {
     const [product] = await db.select().from(products).where(eq(products.id, id));
     return product;
   }
@@ -138,7 +138,7 @@ export class DatabaseStorage implements IStorage {
     return await db.select().from(inquiries).orderBy(desc(inquiries.createdAt));
   }
 
-  async getInquiry(id: number): Promise<Inquiry | undefined> {
+  async getInquiry(id: string): Promise<Inquiry | undefined> {
     const [inquiry] = await db.select().from(inquiries).where(eq(inquiries.id, id));
     return inquiry;
   }
@@ -158,5 +158,4 @@ export class DatabaseStorage implements IStorage {
     return newContact;
   }
 }
-
 export const storage = new DatabaseStorage();
