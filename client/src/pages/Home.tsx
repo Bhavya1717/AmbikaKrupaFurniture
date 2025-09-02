@@ -25,7 +25,29 @@ export default function Home() {
   const recentContacts = contacts?.slice(0, 5) || [];
 
   if (isLoading) {
-    return <div className="text-center py-12">Loading...</div>;
+    return (
+      <div className="text-center py-12">
+        {/* Loader JSX */}
+        <div className="about">
+          <a className="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank" rel="noopener noreferrer">
+            <span className="icon"></span>
+          </a>
+          <a className="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank" rel="noopener noreferrer">
+            <span className="icon"></span>
+          </a>
+          <a className="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank" rel="noopener noreferrer">
+            <span className="icon"></span>
+          </a>
+          <a className="bg_links logo"></a>
+        </div>
+        <div className="content">
+          <div className="loading">
+            <p>loading</p>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (

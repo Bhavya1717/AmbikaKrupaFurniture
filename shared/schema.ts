@@ -1,4 +1,4 @@
-// About Sections table for About page content
+// Database schema definitions for CraftsmanCove
 import {
   pgTable,
   text,
@@ -15,7 +15,7 @@ import { relations } from "drizzle-orm";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-// Session storage table (required for Replit Auth)
+// Session storage table (used for authentication/session management)
 export const sessions = pgTable(
   "sessions",
   {
@@ -26,7 +26,7 @@ export const sessions = pgTable(
   (table) => [index("IDX_session_expire").on(table.expire)],
 );
 
-// User storage table (required for Replit Auth)
+// User storage table (stores user info, including Google/Firebase users)
 export const users = pgTable("users", {
   id: varchar("id").primaryKey().notNull(),
   email: varchar("email").unique(),
@@ -37,7 +37,7 @@ export const users = pgTable("users", {
   updatedAt: timestamp("updated_at").defaultNow(),
 });
 
-// Product categories
+// Product categories table
 export const categories = pgTable("categories", {
   id: varchar("id", { length: 64 }).primaryKey(),
   name: varchar("name", { length: 100 }).notNull(),
@@ -64,7 +64,7 @@ export const products = pgTable("products", {
   updatedAt: timestamp("updated_at").defaultNow(),
 });
 
-// Gallery projects
+// Gallery projects table
 export const projects = pgTable("projects", {
   id: varchar("id", { length: 64 }).primaryKey(),
   title: varchar("title", { length: 200 }).notNull(),
@@ -76,7 +76,7 @@ export const projects = pgTable("projects", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-// Custom furniture inquiries
+// Custom furniture inquiries table
 export const inquiries = pgTable("inquiries", {
   id: varchar("id", { length: 64 }).primaryKey(),
   userId: varchar("user_id", { length: 64 }),
@@ -93,7 +93,7 @@ export const inquiries = pgTable("inquiries", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-// Contact form submissions
+// Contact form submissions table
 export const contacts = pgTable("contacts", {
   id: varchar("id", { length: 64 }).primaryKey(),
   firstName: varchar("first_name", { length: 100 }).notNull(),
@@ -107,7 +107,7 @@ export const contacts = pgTable("contacts", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-// About sections
+// About sections table (for About page content)
 export const aboutSections = pgTable("about_sections", {
   id: integer("id").primaryKey(),
   title: text("title"),
@@ -121,7 +121,7 @@ export const aboutSections = pgTable("about_sections", {
   image_urls: text("image_urls"), // or use array if needed
 });
 
-// Relations
+// Table relations
 export const categoriesRelations = relations(categories, ({ many }) => ({
   products: many(products),
 }));
@@ -140,14 +140,14 @@ export const inquiriesRelations = relations(inquiries, ({ one }) => ({
   }),
 }));
 
-// Insert schemas
+// Zod insert schemas for validation
 export const insertCategorySchema = createInsertSchema(categories);
 export const insertProductSchema = createInsertSchema(products);
 export const insertProjectSchema = createInsertSchema(projects);
 export const insertInquirySchema = createInsertSchema(inquiries);
 export const insertContactSchema = createInsertSchema(contacts);
 
-// Types
+// TypeScript types for table rows and inserts
 export type UpsertUser = typeof users.$inferInsert;
 export type User = typeof users.$inferSelect;
 export type Category = typeof categories.$inferSelect;

@@ -28,7 +28,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     console.log("📥 GET /api/about called"); // Debug
     try {
       const about = await getAboutSection();
-      console.log("DB result:", about); // Debug
+      // console.log("DB result:", about); // Debug
 
       if (!about) {
         return res.status(404).json({ message: "About section not found" });

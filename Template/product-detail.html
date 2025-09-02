@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Chair - CraftWood Custom Furniture</title>
+    <meta name="description" content="Premium designer chair handcrafted by CraftWood. Features solid oak construction, ergonomic design, and customizable finishes. ₹25,000 with free delivery.">
+    
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter bg-white">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i id="logo-icon" class="fas fa-hammer text-2xl text-brown-primary transition-transform duration-300"></i>
+                    <span class="text-2xl font-bold text-brown-primary">CraftWood</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">Home</a>
+                    <a href="products.html" class="nav-link text-brown-primary font-medium transition-all duration-300">Products</a>
+                    <a href="gallery.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">Gallery</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">About</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-brown-primary font-medium transition-all duration-300">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="tel:+919876543210" class="btn-primary hidden sm:inline-flex">
+                        <i class="fas fa-phone mr-2"></i>
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="pt-24 pb-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="index.html" class="text-gray-500 hover:text-brown-primary">Home</a>
+                        <span class="mx-2 text-gray-400">/</span>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="products.html" class="text-gray-500 hover:text-brown-primary">Products</a>
+                        <span class="mx-2 text-gray-400">/</span>
+                    </li>
+                    <li class="text-brown-primary font-medium">Designer Chair</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Product Images -->
+                <div class="fade-in-left">
+                    <div class="relative">
+                        <div id="main-image" class="relative overflow-hidden rounded-lg bg-gray-100 cursor-zoom-in transition-transform duration-300">
+                            <img id="current-image" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Designer Chair" class="w-full h-96 object-cover">
+                            <div class="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg">
+                                <i class="fas fa-search-plus text-gray-600"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 grid grid-cols-4 gap-2">
+                            <button class="image-thumb active" data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200" alt="View 1" class="w-full h-full object-cover rounded-lg">
+                            </button>
+                            <button class="image-thumb" data-image="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600">
+                                <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200" alt="View 2" class="w-full h-full object-cover rounded-lg">
+                            </button>
+                            <button class="image-thumb" data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200" alt="View 3" class="w-full h-full object-cover rounded-lg">
+                            </button>
+                            <button class="image-thumb" data-image="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600">
+                                <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200" alt="View 4" class="w-full h-full object-cover rounded-lg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="fade-in-right">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-brown-primary text-white px-4 py-2 rounded-full text-sm font-medium">Featured Product</span>
+                        <div class="flex space-x-2">
+                            <button class="btn-outline-icon">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="btn-outline-icon">
+                                <i class="fas fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h1 class="text-3xl font-bold text-brown-primary mb-4">Premium Designer Chair</h1>
+                    
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">(24 reviews)</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex items-baseline space-x-4">
+                            <span class="text-3xl font-bold text-brown-primary">₹25,000</span>
+                            <span class="text-lg text-gray-500 line-through">₹30,000</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">20% OFF</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">Inclusive of all taxes. Free delivery available.</p>
+                    </div>
+
+                    <p class="text-gray-700 mb-6">
+                        Expertly crafted designer chair featuring premium solid oak construction with ergonomic design. 
+                        Perfect for office spaces or dining rooms, this chair combines comfort with timeless elegance.
+                    </p>
+
+                    <!-- Product Options -->
+                    <div class="space-y-6 mb-8">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3">Finish Options</h3>
+                            <div class="flex space-x-3">
+                                <button class="finish-option active" data-finish="natural">Natural</button>
+                                <button class="finish-option" data-finish="dark-walnut">Dark Walnut</button>
+                                <button class="finish-option" data-finish="white">White</button>
+                                <button class="finish-option" data-finish="honey">Honey</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3">Size Options</h3>
+                            <div class="flex space-x-3">
+                                <button class="size-option active" data-size="standard">Standard</button>
+                                <button class="size-option" data-size="large">Large</button>
+                                <button class="size-option" data-size="custom">Custom</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3">Quantity</h3>
+                            <div class="flex items-center space-x-3">
+                                <button id="qty-minus" class="btn-outline-icon">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span id="quantity" class="text-xl font-semibold min-w-12 text-center">1</span>
+                                <button id="qty-plus" class="btn-outline-icon">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex space-x-4">
+                            <button class="btn-primary flex-1">
+                                <i class="fas fa-shopping-cart mr-2"></i>
+                                Add to Cart
+                            </button>
+                            <button class="btn-outline flex-1">
+                                Buy Now
+                            </button>
+                        </div>
+                        <button class="btn-outline w-full">
+                            Request Custom Quote
+                        </button>
+                    </div>
+
+                    <!-- Product Features -->
+                    <div class="grid grid-cols-3 gap-4 py-6 border-t border-gray-200">
+                        <div class="text-center">
+                            <i class="fas fa-truck text-brown-primary text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">Free Delivery</p>
+                            <p class="text-xs text-gray-600">Within city limits</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt text-brown-primary text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">5 Year Warranty</p>
+                            <p class="text-xs text-gray-600">Manufacturing defects</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-undo text-brown-primary text-2xl mb-2"></i>
+                            <p class="text-sm font-medium">7 Day Return</p>
+                            <p class="text-xs text-gray-600">No questions asked</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details Tabs -->
+            <div class="mt-16 fade-in-up">
+                <div class="border-b border-gray-200">
+                    <nav class="-mb-px flex space-x-8">
+                        <button class="tab-button active" data-tab="specifications">Specifications</button>
+                        <button class="tab-button" data-tab="reviews">Reviews (24)</button>
+                        <button class="tab-button" data-tab="care">Care Instructions</button>
+                        <button class="tab-button" data-tab="delivery">Delivery Info</button>
+                    </nav>
+                </div>
+                
+                <div class="tab-content active" id="specifications">
+                    <div class="bg-white rounded-lg p-6 mt-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold mb-4">Product Details</h4>
+                                <dl class="space-y-2">
+                                    <div class="flex justify-between">
+                                        <dt class="text-gray-600">Material:</dt>
+                                        <dd class="font-medium">Solid Oak Wood</dd>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <dt class="text-gray-600">Finish:</dt>
+                                        <dd class="font-medium">Natural Stain</dd>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <dt class="text-gray-600">Dimensions:</dt>
+                                        <dd class="font-medium">24" x 20" x 32"</dd>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <dt class="text-gray-600">Weight:</dt>
+                                        <dd class="font-medium">8 kg</dd>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <dt class="text-gray-600">Assembly:</dt>
+                                        <dd class="font-medium">Minimal Required</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-4">Features</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Premium quality solid wood construction</li>
+                                    <li>• Handcrafted by skilled artisans</li>
+                                    <li>• Eco-friendly, non-toxic finishes</li>
+                                    <li>• Ergonomic design for comfort</li>
+                                    <li>• Customizable size and finish options</li>
+                                    <li>• Easy maintenance and cleaning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="reviews">
+                    <div class="mt-6 space-y-6">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold">Customer Reviews</h3>
+                            <button class="btn-outline">Write a Review</button>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="md:col-span-1">
+                                <div class="bg-white rounded-lg p-6 text-center border">
+                                    <div class="text-4xl font-bold text-brown-primary mb-2">4.2</div>
+                                    <div class="flex justify-center mb-2 text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <p class="text-gray-600">Based on 24 reviews</p>
+                                </div>
+                            </div>
+                            
+                            <div class="md:col-span-2 space-y-4">
+                                <div class="bg-white rounded-lg p-6 border">
+                                    <div class="flex items-start justify-between mb-4">
+                                        <div>
+                                            <h4 class="font-semibold">Rajesh Kumar</h4>
+                                            <div class="flex items-center mt-1 text-yellow-400">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">2024-01-15</span>
+                                    </div>
+                                    <p class="text-gray-700">Excellent quality chair. Very comfortable and well-crafted. The wood finish is beautiful.</p>
+                                </div>
+                                
+                                <div class="bg-white rounded-lg p-6 border">
+                                    <div class="flex items-start justify-between mb-4">
+                                        <div>
+                                            <h4 class="font-semibold">Priya Sharma</h4>
+                                            <div class="flex items-center mt-1 text-yellow-400">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">2024-01-10</span>
+                                    </div>
+                                    <p class="text-gray-700">Beautiful design and good quality. Delivery was on time and setup was easy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="care">
+                    <div class="bg-white rounded-lg p-6 mt-6">
+                        <h4 class="text-lg font-semibold mb-4">Care & Maintenance Instructions</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h5 class="font-semibold mb-3">Daily Care</h5>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Dust regularly with a soft, dry cloth</li>
+                                    <li>• Avoid direct sunlight and heat sources</li>
+                                    <li>• Use coasters for beverages</li>
+                                    <li>• Clean spills immediately</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-3">Deep Cleaning</h5>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Use mild soap solution for cleaning</li>
+                                    <li>• Apply wood polish every 6 months</li>
+                                    <li>• Avoid harsh chemicals and abrasives</li>
+                                    <li>• Professional maintenance recommended annually</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="delivery">
+                    <div class="bg-white rounded-lg p-6 mt-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Delivery Information</h4>
+                                <dl class="space-y-3">
+                                    <div>
+                                        <dt class="font-medium text-gray-900">Delivery Time:</dt>
+                                        <dd class="text-gray-700">1-2 weeks from order confirmation</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="font-medium text-gray-900">Delivery Charges:</dt>
+                                        <dd class="text-gray-700">Free within city limits</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="font-medium text-gray-900">Installation:</dt>
+                                        <dd class="text-gray-700">Minimal assembly required</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="font-medium text-gray-900">Assembly Time:</dt>
+                                        <dd class="text-gray-700">15-30 minutes</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">What to Expect</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• SMS/Call confirmation before delivery</li>
+                                    <li>• 2-hour delivery window</li>
+                                    <li>• Quality check at delivery</li>
+                                    <li>• Assembly instructions included</li>
+                                    <li>• Care instructions provided</li>
+                                    <li>• Packaging material removal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="mt-16 fade-in-up">
+                <h2 class="text-2xl font-bold text-brown-primary mb-8">Related Products</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Related product cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brown-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-hammer text-2xl text-brown-secondary"></i>
+                        <span class="text-2xl font-bold">CraftWood</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">Premium custom furniture crafted with precision and passion.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-brown-secondary"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-brown-secondary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-brown-secondary"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-brown-secondary">Home</a></li>
+                        <li><a href="products.html" class="text-gray-300 hover:text-brown-secondary">Products</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-brown-secondary">Gallery</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-brown-secondary">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Custom Furniture</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Interior Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Furniture Repair</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brown-secondary">Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-300"><i class="fas fa-phone mr-2"></i> +91 98765 43210</p>
+                        <p class="text-gray-300"><i class="fas fa-envelope mr-2"></i> info@craftwood.com</p>
+                        <p class="text-gray-300"><i class="fas fa-map-marker-alt mr-2"></i> 123 Craftsman Lane, City 560001</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 CraftWood. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script src="product-detail.js"></script>
+</body>
+</html>
