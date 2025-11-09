@@ -2,7 +2,7 @@
 
 > A modern, full-stack e-commerce platform for custom furniture and carpentry services. Built with React, TypeScript, Express, and PostgreSQL.
 
-![Ambika Krupa Furniture](https://img.shields.io/badge/CraftsmanCove-v1.0.0-brown?style=for-the-badge)
+![Ambika Krupa Furniture](https://img.shields.io/badge/AmbikaKrupaFurniture-v1.0.0-brown?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-18.3.1-blue?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-blue?style=for-the-badge&logo=typescript)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Latest-blue?style=for-the-badge&logo=postgresql)
